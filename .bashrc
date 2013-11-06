@@ -9,7 +9,7 @@
 # \033[0;37m - Grey
 # \033[0;39m - White
 export TERM=xterm-256color
-export PS1='\[\e[1;36m\]\t!\! \[\e[01;33m\]\u\[\e[m\]@\h\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+export PS1='\[\e[1;36m\]\t \[\e[01;33m\]\u\[\e[m\]@\h\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
 PATH=${PATH}:${HOME}/bin
 export EDITOR=/usr/bin/vim
 HISTCONTROL=ignoreboth
@@ -31,7 +31,8 @@ if [[  `uname` =~ "Linux" ]] ; then
    alias ll='ls -alF'
    alias la='ls -A'
    alias l='ls -CF'
-
+   
+   alias pacman='pacman --color=auto'
    alias grep='grep --color=auto'
    alias fgrep='fgrep --color=auto'
    alias egrep='egrep --color=auto'
@@ -51,6 +52,7 @@ set autologout=0
 [[ -s "$HOME/.bash_aliases" ]] && . "$HOME/.bash_aliases" # Load bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 [[ -s "$HOME/ENV/bin/activate" ]] && . "$HOME/ENV/bin/activate" # Load virtualenv
+[[ -f "/usr/share/bash-completion/bash_completion" ]] && source "/usr/share/bash-completion/bash_completion" #bash-completion
 
 if [ -n "$SSH_TTY" ] ; then
 echo $SSH_TTY
