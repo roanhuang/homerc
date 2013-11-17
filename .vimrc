@@ -67,9 +67,6 @@ set ruler               " show line and column number
 set showcmd 			" show (partial) command in status lineime.sleep(1)
 
 au BufRead,BufNewFile *.py set expandtab
-au BufRead,BufNewFile *.c set noexpandtab
-au BufRead,BufNewFile *.h set noexpandtab
-au BufRead,BufNewFile Makefile* set noexpandtab
 
 
 
