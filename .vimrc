@@ -64,7 +64,6 @@ set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
 set backspace=indent,eol,start
 set ruler               " show line and column number
-set showcmd 			" show (partial) command in status lineime.sleep(1)
 
 au BufRead,BufNewFile *.py set expandtab
 
